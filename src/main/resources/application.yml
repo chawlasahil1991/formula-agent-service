@@ -1,0 +1,15 @@
+server:
+  port: 8080
+  shutdown: graceful
+
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
+
+app:
+  ai:
+    openai-api-key: ${OPENAI_API_KEY}
+    model-name: gpt-4o
+    temperature: 0.0
+  logging:
+    dataset-path: ./logs/formula_failures.jsonl
